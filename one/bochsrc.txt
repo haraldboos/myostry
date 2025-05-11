@@ -1,0 +1,26 @@
+# Bochs Configuration File - Save as bochsrc.txt
+
+# Set memory size (32MB)
+megs: 32
+
+# Display settings (SDL for graphics)
+display_library: sdl2
+
+# BIOS and VGA ROM images
+romimage: file=/usr/share/bochs/BIOS-bochs-latest
+vgaromimage: file=/usr/share/bochs/VGABIOS-lgpl-latest
+
+# Bootable CD-ROM configuration
+ata0-master: type=cdrom, path=os.iso, status=inserted
+
+# Boot order (from CD-ROM)
+boot: cdrom
+
+# Log output file
+log: bochslog.txt
+
+# Clock settings (sync time with host)
+clock: sync=realtime, time0=local
+
+# CPU settings (1 core, 1,000,000 instructions per second)
+cpu: count=1, ips=1000000
